@@ -1,47 +1,68 @@
 import tkinter as tk
+
 window = tk.Tk()
 window.title("Calulator")
+
 output = tk.Entry(window, width="50")
 output.pack()
+
 def button1 ():
     output.insert("end", "1")
+
 def button2 ():
     output.insert("end", "2")
+
 def button3 ():
     output.insert("end", "3")
+
 def button4 ():
     output.insert("end", "4")
+
 def button5 ():
     output.insert("end", "5")
+    
 def button6 ():
     output.insert("end", "6")
+    
 def button7 ():
     output.insert("end", "7")
+    
 def button8 ():
     output.insert("end", "8")
+    
 def button9 ():
     output.insert("end", "9")
+    
 def button0 ():
     output.insert("end", "0")
+    
 def buttonplus ():
     output.insert("end"," + ")
+   
 def buttonminus ():
     output.insert("end"," - ")
+    
 def buttontimes ():
     output.insert("end"," * ")
+   
 def buttonex ():
     output.insert("end"," ** ")
+    
 def buttondivide ():
     output.insert("end"," / ")
+    
 def buttonequal ():
     string = output.get()
     answer = eval(string)
     output.delete(0, "end")
     output.insert("end", answer)
+    
 def buttonclear ():
     output.delete(0, "end")
+    
 def deletelast ():
     output.delete(1,"end")
+    
 button1 = tk.Button(window, text="1", command=button1)
 button1.pack(side="left")
 button2 = tk.Button(window, text="2", command=button2)
@@ -78,4 +99,5 @@ buttonclear = tk.Button(window, text="clear", command=buttonclear)
 buttonclear.pack(side="left")
 delete = tk.Button(window, text="delete", command=deletelast)
 delete.pack()
+
 window.mainloop()
